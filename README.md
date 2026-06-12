@@ -161,12 +161,11 @@ Role ditentukan otomatis: jika UID pengguna terdaftar di tabel `admins`, maka di
 
 ---
 
-## 👥 Tim Pengembang — Kelompok 13
+## 👥 Developer API — Kelompok 13
 
 | Nama | NIM |
 |---|---|
 | Mohammad Fahmi Nazmuddin | 242410102011 |
-| Adelio Frizky | 242410102064 |
-| Ilham Dwi Cahya | 242410102081 |
+
 
 **Program Studi Teknologi Informasi — Universitas Jember (2026)**
