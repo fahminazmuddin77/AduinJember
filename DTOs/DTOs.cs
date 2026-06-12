@@ -88,13 +88,15 @@ public record GawatDto(
 public record CreateWoroWoroRequest(
     string Judul,
     string Konten,
-    string? Kategori        // Infrastruktur | Kebersihan | Keamanan | Kesehatan | Lainnya
+    string? Kategori,        // Infrastruktur | Kebersihan | Keamanan | Kesehatan | Lainnya
+    string? FotoUrl
 );
 
 public record UpdateWoroWoroRequest(
     string? Judul,
     string? Konten,
-    string? Kategori
+    string? Kategori,
+    string? FotoUrl
 );
 
 public record WoroWoroDto(
@@ -103,6 +105,7 @@ public record WoroWoroDto(
     string Judul,
     string Konten,
     string? Kategori,
+    string? FotoUrl,
     DateTime CreatedAt,
     string? NamaAdmin
 );

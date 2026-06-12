@@ -1,4 +1,4 @@
-﻿namespace AduinJember.Models;
+namespace AduinJember.Models;
 
 public class User
 {
@@ -77,6 +77,7 @@ public class WoroWoro
     public string Judul { get; set; } = string.Empty;
     public string Konten { get; set; } = string.Empty;
     public string? Kategori { get; set; }
+    public string? FotoUrl { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
     // Navigation

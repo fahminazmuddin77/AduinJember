@@ -28,7 +28,7 @@ public class WoroWoroRepository(AppDbContext db) : IWoroWoroRepository
         return woro;
     }
 
-    public async Task<WoroWoro> UpdateAsync(Guid id, string? judul, string? konten, string? kategori)
+    public async Task<WoroWoro> UpdateAsync(Guid id, string? judul, string? konten, string? kategori, string? fotoUrl)
     {
         var woro = await db.WoroWoros.FindAsync(id)
             ?? throw new KeyNotFoundException("Woro-woro tidak ditemukan.");
@@ -36,6 +36,7 @@ public class WoroWoroRepository(AppDbContext db) : IWoroWoroRepository
         if (judul    != null) woro.Judul    = judul;
         if (konten   != null) woro.Konten   = konten;
         if (kategori != null) woro.Kategori = kategori;
+        if (fotoUrl  != null) woro.FotoUrl  = fotoUrl;
 
         await db.SaveChangesAsync();
         return woro;

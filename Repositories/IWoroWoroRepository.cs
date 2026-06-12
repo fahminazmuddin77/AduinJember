@@ -7,6 +7,6 @@ public interface IWoroWoroRepository
     Task<WoroWoro?> GetByIdAsync(Guid id);
     Task<IEnumerable<WoroWoro>> GetAllAsync(string? kategori = null);
     Task<WoroWoro> CreateAsync(WoroWoro woro);
-    Task<WoroWoro> UpdateAsync(Guid id, string? judul, string? konten, string? kategori);
+    Task<WoroWoro> UpdateAsync(Guid id, string? judul, string? konten, string? kategori, string? fotoUrl);
     Task DeleteAsync(Guid id);
 }

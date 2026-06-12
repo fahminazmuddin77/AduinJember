@@ -93,6 +93,7 @@ public class AppDbContext : DbContext
             e.Property(x => x.Judul).HasColumnName("judul").IsRequired();
             e.Property(x => x.Konten).HasColumnName("konten").IsRequired();
             e.Property(x => x.Kategori).HasColumnName("kategori");
+            e.Property(x => x.FotoUrl).HasColumnName("foto_url");
             e.Property(x => x.CreatedAt).HasColumnName("created_at");
             e.HasOne(x => x.Admin).WithMany(a => a.WoroWoros)
                 .HasForeignKey(x => x.IdAdmin).OnDelete(DeleteBehavior.SetNull);

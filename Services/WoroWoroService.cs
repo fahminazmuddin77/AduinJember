@@ -28,7 +28,8 @@ public class WoroWoroService(IWoroWoroRepository repo) : IWoroWoroService
             IdAdmin  = adminId,
             Judul    = req.Judul,
             Konten   = req.Konten,
-            Kategori = req.Kategori
+            Kategori = req.Kategori,
+            FotoUrl  = req.FotoUrl
         };
 
         var created = await repo.CreateAsync(woro);
@@ -40,7 +41,7 @@ public class WoroWoroService(IWoroWoroRepository repo) : IWoroWoroService
         if (req.Kategori != null && !ValidKategori.Contains(req.Kategori))
             throw new ArgumentException("Kategori tidak valid.");
 
-        var updated = await repo.UpdateAsync(id, req.Judul, req.Konten, req.Kategori);
+        var updated = await repo.UpdateAsync(id, req.Judul, req.Konten, req.Kategori, req.FotoUrl);
         return MapToDto(updated);
     }
 
@@ -48,7 +49,7 @@ public class WoroWoroService(IWoroWoroRepository repo) : IWoroWoroService
 
     private static WoroWoroDto MapToDto(WoroWoro w) => new(
         w.IdWoro, w.IdAdmin,
-        w.Judul, w.Konten, w.Kategori,
+        w.Judul, w.Konten, w.Kategori, w.FotoUrl,
         w.CreatedAt, w.Admin?.Nama
     );
 }
