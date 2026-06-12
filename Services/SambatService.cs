@@ -9,7 +9,7 @@ public class SambatService(
     IRiwayatRepository riwayatRepo) : ISambatService
 {
     private static readonly string[] ValidStatus =
-        ["menunggu", "diproses", "ditindaklanjuti", "selesai"];
+        ["menunggu", "diproses", "ditindaklanjuti", "selesai", "ditolak"];
 
     private static readonly string[] ValidKategori =
         ["Sosial", "Infrastruktur", "Layanan Umum"];

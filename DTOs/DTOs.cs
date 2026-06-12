@@ -24,7 +24,7 @@ public record CreateSambatRequest(
 );
 
 public record UpdateSambatStatusRequest(
-    string Status,          // menunggu | diproses | ditindaklanjuti | selesai
+    string Status,          // menunggu | diproses | ditindaklanjuti | selesai | ditolak
     string? Catatan         // catatan opsional dari admin
 );
 
